@@ -1,0 +1,9 @@
+fastapi
+aiohttp
+pandas
+numpy
+redis
+psycopg2-binary
+python-dotenv
+uvicorn
+requests
