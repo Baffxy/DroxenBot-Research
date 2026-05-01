@@ -53,7 +53,7 @@ Key operations:
 
 Only tokens that pass strict quality filters move forward.
 
-### 4. Intelligence / AI Layer
+### 4. Decision & Intelligence Layer
 
 This is the decision-making core of DroxenBot.
 
@@ -89,6 +89,6 @@ Features:
 
 • Leaderboard generator
 
-• Milestone tracker (2x, 3x, 5x, etc.)
+• Performance & Growth Tracker
 
 Users receive real-time alerts for high-potential tokens.
