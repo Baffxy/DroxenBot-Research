@@ -1,4 +1,5 @@
 # DroxenBot — Autonomous AI Agent for Early Detection and Decision-Making in High-Velocity Digital Markets
+### Research Project Repository
 
 Author: Abdullahi Labaran  
 B.Eng Computer Engineering (AI & Data Science)  
@@ -49,6 +50,20 @@ This project explores:
 
 4. How can autonomous agents reduce noise in speculative markets?
 
+## Key Contributions
+
+This project contributes the following:
+
+• Design of a real-time autonomous monitoring pipeline for decentralized markets 
+
+• Development of a multi-stage token filtering and ranking system  
+
+• Empirical observation of behavioral wallet activity as an early signal  
+
+• Iterative optimization improving signal precision from 20% → ~75%  
+
+• Deployment of a live production system delivering real-time alerts
+
 ## System Architecture
 
 ### Agent Pipeline
@@ -76,6 +91,25 @@ Gold → High-confidence trend
 
 #### Real-Time Alerts
 Automated alert system for newly detected signals and growth milestones.
+
+The diagram below shows the end-to-end pipeline of DroxenBot.
+
+![Architecture](docs/architecture.png)
+
+## Live Deployment
+
+The system has been deployed as a production Telegram bot and has been operating continuously in real market conditions.
+
+Over the research period:
+
+• ~9 months of continuous monitoring 
+
+• Thousands of tokens analyzed 
+
+• Real users subscribed to alerts  
+
+• Ongoing performance tracking of detected assets
+
 ## Experimental Evolution
 
 The system was iteratively improved over a **9-month research period**.
@@ -98,6 +132,21 @@ This demonstrates the impact of **iterative signal filtering and optimization**.
 | Blockchain Data | Helius API |
 | Market Data | DEX Analytics APIs |
 | Deployment | Railway / Render |
+
+## Project Structure
+
+```
+DroxenBot/
+│
+├── core/                # Data collection & processing modules
+├── filters/             # Token filtering & risk checks
+├── alerts/              # Telegram alert & notification system
+├── database/            # PostgreSQL & Redis integration
+├── utils/               # Helper functions
+├── docs/                # Documentation & architecture diagram
+│   └── architecture.png
+└── README.md
+```
 
 ## Methodology
 
