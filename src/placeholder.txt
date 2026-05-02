@@ -1,2 +1,0 @@
-Core implementation is private.
-This repository contains the research and system design only.
