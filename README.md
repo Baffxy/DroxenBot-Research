@@ -4,7 +4,8 @@
 **Author:** Abdullahi Labaran  
 **Background:** B.Tech Computer Engineering (AI & Data Science)  
 **Research Interests:** Autonomous Systems, Machine Learning, Modeling & Simulation  
-**Email:** baffahlabaran01@gmail.com                                                                                               
+**Email:** baffahlabaran01@gmail.com                                                           
+**LinkedIn:** www.linkedin.com/in/abdullahi-labaran                                                                                      
 **Year:** 2026
 
 ## Abstract
