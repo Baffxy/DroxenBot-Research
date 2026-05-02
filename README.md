@@ -1,10 +1,11 @@
 # DroxenBot — Autonomous AI Agent for Early Detection and Decision-Making in High-Velocity Digital Markets
 ### Research Project Repository
 
-Author: Abdullahi Labaran  
-B.Eng Computer Engineering (AI & Data Science)  
-Research Interests: Autonomous Systems, Machine Learning, Modeling & Simulation  
-Year: 2026
+**Author:** Abdullahi Labaran  
+**Background:** B.Tech Computer Engineering (AI & Data Science)  
+**Research Interests:** Autonomous Systems, Machine Learning, Modeling & Simulation  
+**Email:** baffahlabaran01@gmail.com                                                                                               
+**Year:** 2026
 
 ## Abstract
 
@@ -92,9 +93,10 @@ Gold → High-confidence trend
 #### Real-Time Alerts
 Automated alert system for newly detected signals and growth milestones.
 
-The diagram below shows the end-to-end pipeline of DroxenBot.
 
 ![Architecture](docs/architecture.png)
+
+The diagram above shows the end-to-end pipeline of DroxenBot.
 
 ## Live Deployment
 
