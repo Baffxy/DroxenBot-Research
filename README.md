@@ -62,7 +62,7 @@ This project contributes the following:
 
 • Empirical observation of behavioral wallet activity as an early signal  
 
-• Iterative optimization improving signal precision from 20% → ~75%  
+• Iterative optimization improving signal precision from 20% → ~85%  
 
 • Deployment of a live production system delivering real-time alerts
 
@@ -120,7 +120,7 @@ The system was iteratively improved over a **9-month research period**.
 | Phase | Signals / Day | Hit Rate |
 |------|---------------|---------|
 | Early Prototype | 80 | 10–20% |
-| Optimized System | 10–15 | 70–80% |
+| Optimized System | 10–15 | 70–85% |
 
 This demonstrates the impact of **iterative signal filtering and optimization**.
 
