@@ -1,4 +1,5 @@
-# DroxenBot — Autonomous AI Agent for Early Detection and Decision-Making in High-Velocity Digital Markets
+# DroxenBot — An Autonomous Agent for Early Detection and Decision-Making in High-Velocity Digital Markets
+
 ### Research Project Repository
 
 **Author:** Abdullahi Labaran  
@@ -8,11 +9,19 @@
 **LinkedIn:** www.linkedin.com/in/abdullahi-labaran                                                                                      
 **Year:** 2026
 
+> **Implementation note:** This public repository documents the research
+> design, architecture, and experimental evolution of DroxenBot. The
+> full production implementation (data pipelines, real-time monitoring
+> services, deployment configuration, and proprietary filtering/scoring
+> logic) is maintained in a private repository, since the system
+> underlies a live, commercially operating product. Access to the full
+> implementation can be provided to academic reviewers upon request.
+
 ## Abstract
 
-DroxenBot is an experimental AI-driven market intelligence agent designed to detect early-stage digital assets with high growth potential using real-time on-chain activity, market microstructure, and behavioral wallet signals.
+DroxenBot is an experimental autonomous market-intelligence agent designed to detect early-stage digital assets with high growth potential using real-time on-chain activity, market microstructure, and behavioral wallet signals.
 
-The system combines decentralized exchange analytics, blockchain data streams, and algorithmic scoring to identify emerging assets before major price discovery occurs.
+The system combines decentralized exchange analytics, blockchain data streams, and heuristic scoring to identify emerging assets before major price discovery occurs.
 
 This project explores how **autonomous decision systems** can operate continuously in noisy, high-velocity financial environments.
 
@@ -20,82 +29,61 @@ This project explores how **autonomous decision systems** can operate continuous
 
 Unlike traditional financial markets, decentralized markets are:
 
-• Real-time
-
-• Noisy and unstructured
-
-• Highly volatile
-
-• Dominated by behavioral signals
+- Real-time
+- Noisy and unstructured
+- Highly volatile
+- Dominated by behavioral signals
 
 Early detection of promising assets requires autonomous systems capable of:
 
-• Continuous monitoring
+- Continuous monitoring
+- Noise filtering
+- Opportunity ranking
+- Real-time reaction under uncertainty
 
-• Noise filtering
-
-• Opportunity ranking
-
-• Real-time reaction under uncertainty
-
-DroxenBot investigates how **AI-style agents** can operate in such environments.
+DroxenBot investigates how **rule-based autonomous agents** can operate in such environments.
 
 ## Research Questions
 
 This project explores:
 
 1. Can algorithmic filters detect promising assets earlier than human traders?
-
+   
 2. Which on-chain signals correlate with large market movements?
-
+   
 3. Can smart-wallet behavior serve as a predictive feature?
-
+   
 4. How can autonomous agents reduce noise in speculative markets?
 
 ## Key Contributions
 
 This project contributes the following:
 
-• Design of a real-time autonomous monitoring pipeline for decentralized markets 
-
-• Development of a multi-stage token filtering and ranking system  
-
-• Empirical observation of behavioral wallet activity as an early signal  
-
-• Iterative optimization improving signal precision from 20% → ~85%  
-
-• Deployment of a live production system delivering real-time alerts
+- Design of a real-time autonomous monitoring pipeline for decentralized markets
+  
+- Development of a multi-stage token filtering and ranking system
+  
+- Empirical observation of behavioral wallet activity as an early signal
+  
+- Iterative optimization improving observed signal precision from ~20% to ~85% (see caveats below)
+  
+- Deployment of a live production system delivering real-time alerts to real subscribers
 
 ## System Architecture
 
 ### Agent Pipeline
-Token Discovery
-Monitor newly launched tokens
-Track trending assets across DEX markets
 
-#### Data Aggregation
-Liquidity depth
-Market cap & volume velocity
-Transaction activity
-Smart wallet accumulation
-Holder distribution
-#### Filtering Engine
-Removes high-risk or low-quality tokens using rule-based filters.
+**Token Discovery** — monitor newly launched tokens; track trending assets across DEX markets
 
-#### Scoring Engine
-Tokens are ranked into tiers:
+**Data Aggregation** — liquidity depth, market cap & volume velocity, transaction activity, smart wallet accumulation, holder distribution
 
-Bronze → Early signal
+**Filtering Engine** — removes high-risk or low-quality tokens using rule-based filters
 
-Silver → Strong momentum
+**Scoring Engine** — ranks tokens into tiers: Bronze (early signal) → Silver (strong momentum) → Gold (high-confidence trend)
 
-Gold → High-confidence trend
+**Real-Time Alerts** — automated alert system for newly detected signals and growth milestones
 
-#### Real-Time Alerts
-Automated alert system for newly detected signals and growth milestones.
-
-
-![Architecture](docs/architecture.png)
+![Architecture](https://github.com/Baffxy/DroxenBot-Research/raw/main/docs/architecture.png)
 
 The diagram above shows the end-to-end pipeline of DroxenBot.
 
@@ -105,51 +93,50 @@ The system has been deployed as a production Telegram bot and has been operating
 
 Over the research period:
 
-• ~9 months of continuous monitoring 
-
-• Thousands of tokens analyzed 
-
-• Real users subscribed to alerts  
-
-• Ongoing performance tracking of detected assets
+- ~9 months of continuous monitoring
+- Thousands of tokens analyzed
+- Real users subscribed to alerts
+- Ongoing performance tracking of detected assets
 
 ## Experimental Evolution
 
 The system was iteratively improved over a **9-month research period**.
 
-| Phase | Signals / Day | Hit Rate |
-|------|---------------|---------|
-| Early Prototype | 80 | 10–20% |
-| Optimized System | 10–15 | 70–85% |
+| Phase            | Signals / Day | Hit Rate |
+| ---------------- | ------------- | -------- |
+| Early Prototype  | 80            | 10–20%   |
+| Optimized System | 10–15         | 70–85%   |
 
-This demonstrates the impact of **iterative signal filtering and optimization**.
+*These hit-rate figures come from continuous hands-on observation during deployment — cross-referenced against automated tracking and real-time public documentation of calls at [x.com/Droxenbot](https://x.com/Droxenbot) — not from a fixed, consistently-applied success threshold or a controlled baseline comparison. See the accompanying research paper's Measurement Methodology section (4.5) for full detail, and Limitations (5.4) for what a more rigorous evaluation would require.*
 
 ## Technical Stack
 
-| Component | Technology |
-|----------|------------|
-| Language | Python |
-| Backend | FastAPI |
-| Database | PostgreSQL |
-| Cache | Redis |
-| Blockchain Data | Helius API |
-| Market Data | DEX Analytics APIs |
-| Deployment | Railway / Render |
+| Component       | Technology         |
+| --------------- | ------------------ |
+| Language        | Python              |
+| Backend         | FastAPI             |
+| Database        | PostgreSQL          |
+| Cache           | Redis               |
+| Blockchain Data | Helius API          |
+| Market Data     | DEX Analytics APIs  |
+| Deployment      | Railway / Render    |
 
-## Project Structure
+## Repository Structure
+
+This public repository contains the research documentation and architecture design, not the full production codebase (see implementation note above):
 
 ```
-DroxenBot/
+DroxenBot-Research/
 │
-├── core/                # Data collection & processing modules
-├── filters/             # Token filtering & risk checks
-├── alerts/              # Telegram alert & notification system
-├── database/            # PostgreSQL & Redis integration
-├── utils/               # Helper functions
-├── docs/                # Documentation & architecture diagram
+├── docs/                # Architecture diagram and supplementary documentation
 │   └── architecture.png
-└── README.md
+├── src/                 # Notice pointing to the private implementation repository
+├── README.md
+├── LICENSE
+└── requirements.txt
 ```
+
+The full production system is organized internally as data collection, filtering, scoring, storage, and alerting layers shown conceptually in the architecture diagram above — but that code is not part of this public repository.
 
 ## Methodology
 
@@ -157,61 +144,52 @@ DroxenBot/
 
 The system evaluates assets using:
 
-Liquidity depth
+- Liquidity depth
+- Buy/Sell pressure ratio
+- Volume growth rate
+- Holder concentration
+- Smart wallet accumulation
+- Time since launch
+- Market cap momentum
 
-Buy/Sell pressure ratio
+### Scoring Strategy
 
-Volume growth rate
-
-Holder concentration
-
-Smart wallet accumulation
-
-Time since launch
-
-Market cap momentum
-
-Scoring Strategy
-
-Weighted heuristic model combining:
-
-**Market Metrics + On-Chain Signals + Behavioral Indicators**
+Weighted heuristic model combining **market metrics + on-chain signals + behavioral indicators**.
 
 ## Research Relevance
 
 This work connects to research areas in:
 
-• Autonomous Agents
+- Autonomous Agents
+- Real-Time Systems
+- Modeling & Simulation
+- Multi-Agent Decision Systems
+- Data-Driven Forecasting
 
-• Real-time AI Systems
+### Key Observations
 
-• Modeling & Simulation
+- Signal filtering meaningfully improved precision over time, by the author's continuous observation
+- Behavioral wallet activity showed apparent correlation with major growth events
+- Early-stage assets exhibit measurable momentum patterns detectable via real-time data streams
 
-• Multi-Agent Decision Systems
-
-• Data-Driven Forecasting
-
-Over a 9-month experimental period, the system continuously monitored newly launched digital assets and tracked post-detection performance.
-
-### Key observations:
-• Signal filtering dramatically improved precision over time  
-• Behavioral wallet activity showed strong correlation with major growth events  
-• Early-stage assets exhibit measurable momentum patterns detectable via real-time data streams  
-
-These results motivate further research into machine learning ranking models and reinforcement learning agents for automated decision-making.
+These observations motivate further research into machine learning ranking models and a rigorous, baseline-compared evaluation protocol (see the accompanying paper).
 
 ## Future Research Directions
 
-Machine learning ranking models
+- Machine learning ranking models for signal scoring
+- A pre-registered, baseline-compared evaluation protocol
+- Reinforcement learning agents for automated trading decisions
+- Simulation environments for strategy evaluation
+- Cross-chain predictive modeling
+- Risk-aware portfolio optimization
+- Social sentiment signal integration
 
-Reinforcement learning for automated trading
+This project serves as a foundation for future research into autonomous decision systems in real-time financial environments.
 
-Simulation environments for strategy testing
+## Paper
 
-Cross-chain predictive modeling
-
-Risk-aware portfolio allocation
+The full research paper — including detailed methodology, honest discussion of measurement limitations, and results is available as a preprint: *[link to be added once posted to arXiv]*.
 
 ## Disclaimer
 
-This project is for research and educational purposes only and does not constitute financial advice.
+This project is for research and educational purposes only and does not constitute financial advice. Speculative digital-asset markets carry substantial financial risk independent of any detection system's performance.
