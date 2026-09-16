@@ -177,13 +177,15 @@ These are observational findings from live deployment, not statistically validat
 ## Future Research Directions
 
 1. **Rigorous Evaluation Protocol** — a fixed, pre-registered success threshold applied consistently to every detection, with proper precision/recall/F1 reporting
+   
 2. **Baseline Comparisons** — against random selection and simple single-metric filters, to isolate the actual contribution of the multi-stage architecture
-3. **Machine-Learning Ranking** — training supervised/semi-supervised models on accumulated detection history, compared against the current heuristic scorer
-4. **Temporal and Graph-Based Modeling** — representing wallet and transaction relationships as temporal graphs
-5. **Simulation and Backtesting** — controlled environments that replay historical streams
-6. **Cross-Chain Generalization** — extending to additional blockchain ecosystems
-7. **Risk-Aware Decision Support** — incorporating explicit uncertainty and liquidity constraints
-8. **Autonomous Execution as a Separate Research Problem** — evaluated independently under controlled risk limits, not conflated with monitoring performance
+   
+4. **Machine-Learning Ranking** — training supervised/semi-supervised models on accumulated detection history, compared against the current heuristic scorer
+5. **Temporal and Graph-Based Modeling** — representing wallet and transaction relationships as temporal graphs
+6. **Simulation and Backtesting** — controlled environments that replay historical streams
+7. **Cross-Chain Generalization** — extending to additional blockchain ecosystems
+8. **Risk-Aware Decision Support** — incorporating explicit uncertainty and liquidity constraints
+9. **Autonomous Execution as a Separate Research Problem** — evaluated independently under controlled risk limits, not conflated with monitoring performance
 
 This project serves as a foundation for future research into autonomous decision systems in real-time financial environments.
 
