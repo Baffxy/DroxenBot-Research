@@ -1,4 +1,4 @@
-# DroxenBot — An Autonomous Agent for Early Detection and Decision-Making in High-Velocity Digital Markets
+# DroxenBot: A Real-Time Autonomous Agent for On-Chain Detection and Ranking of Emerging Digital Assets
 
 ### Research Project Repository
 
@@ -19,9 +19,9 @@
 
 ## Abstract
 
-DroxenBot is an experimental autonomous market-intelligence agent designed to detect early-stage digital assets with high growth potential using real-time on-chain activity, market microstructure, and behavioral wallet signals.
+DroxenBot is an experimental autonomous market-intelligence agent designed to monitor and rank emerging digital assets using real-time on-chain activity, decentralized-exchange market data, and behavioral wallet signals.
 
-The system combines decentralized exchange analytics, blockchain data streams, and heuristic scoring to identify emerging assets before major price discovery occurs.
+The system combines decentralized exchange analytics, blockchain data streams, and rule-based heuristic scoring to identify emerging assets before major price discovery occurs.
 
 This project explores how **autonomous decision systems** can operate continuously in noisy, high-velocity financial environments.
 
@@ -65,7 +65,7 @@ This project contributes the following:
   
 - Empirical observation of behavioral wallet activity as an early signal
   
-- Iterative optimization improving observed signal precision from ~20% to ~85% (see caveats below)
+- Iterative optimization improving observed signal hit rate from ~10-20% to ~70-85% (see caveats below)
   
 - Deployment of a live production system delivering real-time alerts to real subscribers
 
@@ -107,7 +107,7 @@ The system was iteratively improved over a **9-month research period**.
 | Early Prototype  | 80            | 10–20%   |
 | Optimized System | 10–15         | 70–85%   |
 
-*These hit-rate figures come from continuous hands-on observation during deployment — cross-referenced against automated tracking and real-time public documentation of calls at [x.com/Droxenbot](https://x.com/Droxenbot) — not from a fixed, consistently-applied success threshold or a controlled baseline comparison. See the accompanying research paper's Measurement Methodology section (4.5) for full detail, and Limitations (5.4) for what a more rigorous evaluation would require.*
+*These hit-rate figures come from continuous hands-on observation during deployment — cross-referenced against automated tracking and real-time public documentation of calls at [x.com/Droxenbot](https://x.com/Droxenbot) — not from a fixed, consistently-applied success threshold or a controlled baseline comparison.See the accompanying research paper's Measurement Methodology section for full detail, and its Limitations section for what a more rigorous evaluation would require.*
 
 ## Technical Stack
 
@@ -168,27 +168,28 @@ This work connects to research areas in:
 
 ### Key Observations
 
-- Signal filtering meaningfully improved precision over time, by the author's continuous observation
-- Behavioral wallet activity showed apparent correlation with major growth events
+- Signal filtering meaningfully improved observed hit rate over time, by the author's continuous hands-on tracking
+- Behavioral wallet accumulation was frequently observed preceding major growth events among tokens later flagged as successful
 - Early-stage assets exhibit measurable momentum patterns detectable via real-time data streams
 
-These observations motivate further research into machine learning ranking models and a rigorous, baseline-compared evaluation protocol (see the accompanying paper).
+These are observational findings from live deployment, not statistically validated causal claims — they motivate the more rigorous evaluation protocol and baseline comparisons proposed below and detailed in the accompanying paper.
 
 ## Future Research Directions
 
-- Machine learning ranking models for signal scoring
-- A pre-registered, baseline-compared evaluation protocol
-- Reinforcement learning agents for automated trading decisions
-- Simulation environments for strategy evaluation
-- Cross-chain predictive modeling
-- Risk-aware portfolio optimization
-- Social sentiment signal integration
+1. **Rigorous Evaluation Protocol** — a fixed, pre-registered success threshold applied consistently to every detection, with proper precision/recall/F1 reporting
+2. **Baseline Comparisons** — against random selection and simple single-metric filters, to isolate the actual contribution of the multi-stage architecture
+3. **Machine-Learning Ranking** — training supervised/semi-supervised models on accumulated detection history, compared against the current heuristic scorer
+4. **Temporal and Graph-Based Modeling** — representing wallet and transaction relationships as temporal graphs
+5. **Simulation and Backtesting** — controlled environments that replay historical streams
+6. **Cross-Chain Generalization** — extending to additional blockchain ecosystems
+7. **Risk-Aware Decision Support** — incorporating explicit uncertainty and liquidity constraints
+8. **Autonomous Execution as a Separate Research Problem** — evaluated independently under controlled risk limits, not conflated with monitoring performance
 
 This project serves as a foundation for future research into autonomous decision systems in real-time financial environments.
 
 ## Paper
 
-The full research paper — including detailed methodology, honest discussion of measurement limitations, and results is available as a preprint: *[link to be added once posted to arXiv]*.
+The full research paper — including detailed methodology, honest discussion of measurement limitations, and results — is available as a preprint: *[link to be added once posted to arXiv]*.
 
 ## Disclaimer
 
