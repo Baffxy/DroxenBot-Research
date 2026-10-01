@@ -72,24 +72,29 @@ The reported performance observations are discussed as **observational findings 
 
 DroxenBot is organized as a staged monitoring pipeline:
 
-## Architecture
-
 ```mermaid
 flowchart TD
-    A["DATA SOURCES<br/>Solana on-chain data<br/>DEX market data<br/>Token metadata<br/>Wallet / transaction data"] --> B["DATA COLLECTION<br/>Token discovery<br/>Market data collection<br/>Liquidity data<br/>Transaction data"]
+    A["DATA SOURCES<br/><br/>Solana on-chain data<br/>DEX market data<br/>Token metadata<br/>Wallet / transaction data"]
 
-    B --> C["PREPROCESSING & FEATURE EXTRACTION<br/>Normalization<br/>Market features<br/>Transaction features<br/>Wallet and risk signals"]
+    B["DATA COLLECTION<br/><br/>Token discovery<br/>Market data collection<br/>Liquidity data<br/>Transaction data"]
 
-    C --> D["RISK & ELIGIBILITY FILTER<br/>Liquidity checks<br/>Ownership / concentration<br/>Bundle / behavior checks<br/>Market thresholds<br/>Anti-wash rules"]
+    C["PREPROCESSING & FEATURE EXTRACTION<br/><br/>Normalization<br/>Market features<br/>Transaction features<br/>Wallet and risk signals"]
 
-    D --> E["SCORING & CLASSIFICATION<br/>Heuristic scoring<br/>Momentum signals<br/>Trend detection<br/>Tier classification"]
+    D["RISK & ELIGIBILITY FILTER<br/><br/>Liquidity checks<br/>Ownership / concentration<br/>Bundle / behavior checks<br/>Market thresholds<br/>Anti-wash rules"]
 
-    E --> F["STORAGE & MONITORING<br/>PostgreSQL<br/>Redis<br/>Token and price history"]
+    E["SCORING & CLASSIFICATION<br/><br/>Heuristic scoring<br/>Momentum signals<br/>Trend detection<br/>Tier classification"]
 
-    E --> G["ALERT & OUTPUT<br/>Telegram alerts<br/>Ranked signals<br/>Monitoring results"]
+    F["STORAGE & MONITORING<br/><br/>PostgreSQL<br/>Redis<br/>Token and price history"]
 
-    classDef stage fill:#EDE9FE,stroke:#8B5CF6,stroke-width:1.5px,color:#111827;
-    class A,B,C,D,E,F,G stage;
+    G["ALERT & OUTPUT<br/><br/>Telegram alerts<br/>Ranked signals<br/>Monitoring results"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    E --> G
+```
 
 The architecture separates data acquisition, feature construction, risk screening, candidate evaluation, state management, monitoring, and alert delivery within a continuous monitoring pipeline.
 
